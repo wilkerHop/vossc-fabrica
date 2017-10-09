@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/fabrica',(req,res)=>{
-	res.render('index')
+	res.render('fabrica')
 })
 
 app.listen(process.env.PORT || 3000, () => {
