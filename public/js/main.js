@@ -1,0 +1,5 @@
+$(()=>{
+    $('.imgSaiba').onmouseover(function(){
+        
+    })
+})

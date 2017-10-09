@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee|Libre+Barcode+39+Text');
+body {
+	background-color: #323b3e;
+}
+#titulo {
+	font-family: 'Libre Barcode 39 Text', cursive;
+	color: white;
+	font-size: 50px;
+}
+
+.container-fluid {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.img-responsive {
+	margin: 0 auto;
+}
+.fornecedor{
+	height: 200px;
+	margin-left: 6%;
+	background-color:	lightsalmon;
+}
+.producao{
+	background-color: red;
+	height: 200px;
+	margin-left: 6%;
+}
+.armazem{
+	background-color: orange;
+	height: 200px;
+	margin-left: 6%;
+}
+.venda{
+	background-color: green;
+	height: 200px;
+	margin-left: 6%;
+}
+.patio{
+	background-color: lightblue;
+	height: 200px;
+	margin-left: 12%;
+}
+.vendaSite{
+	background-color: green;
+	height: 200px;
+	margin-left: 6%;
+}
+
+.bg-4 {
+	background-color: #2f2f2f;
+	/* Black Gray */
+	color: #fff;
+	font-family: 'Handlee', cursive;
+	font-size: 16px;
+}
+
+.saiba span{
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 100%;
+	/* display: none; */
+}
+
+@media screen and (max-width: 768px) {
+	#titulo {
+		font-family: 'Libre Barcode 39 Text', cursive;
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	#titulo {
+		font-family: 'Libre Barcode 39 Text', cursive;
+		font-size: 50px;
+	}
+}
