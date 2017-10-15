@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Handlee|Libre+Barcode+39+Text');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
 body {
 	background-color: #323b3e;
 }
@@ -109,4 +110,7 @@ body {
 	#subMenu2{
 		display: none;
 	}
+}
+.fabrica{
+	font-family: 'Saira Extra Condensed', sans-serif;
 }
