@@ -4,6 +4,13 @@ Projeto da aplicação VOSSC para o Challenge da T-Systems.
 ## Gráficos
 Os gráficos estão sendo alimentados por jsons na pasta pública DATA.
 
+### Linha
+Os gráficos de linha são alimentados por um json como esse:
+```json
+[1, 2, 4, 8, 16, 32, 64, 89]
+```
+Onde cada termo do array é uma ocorrência no gráfico.
+
 ### Pizza
 Os gráficos de pizza são alimentados por um json como esse:
 ```json
