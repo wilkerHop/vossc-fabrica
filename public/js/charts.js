@@ -126,12 +126,13 @@ $.getJSON('../DATA/forn3.json', function (data) {
 	});
 });
 
+// PRODUÇÃO
 $.getJSON('../DATA/test.json', function (data) {
 
-	Highcharts.chart('producao', {
+	Highcharts.chart('prod', {
 
 		title: {
-			text: 'Produção da semana'
+			text: 'Grafico 1'
 		},
 
 		xAxis: {
@@ -209,45 +210,63 @@ $.getJSON('../DATA/armazem.json', function (data) {
 
 
 // VENDAS
-$.getJSON('../DATA/test.json', function (data) {
-
-	Highcharts.chart('vendas', {
-
-		title: {
-			text: 'Grafico 1'
-		},
-
-		xAxis: {
-			tickInterval: 7
-		},
-
-		yAxis: {
-			type: 'logarithmic',
-			tickInterval: 1,
-			minorTickInterval: 0.1
-		},
-
-		tooltip: {
-			headerFormat: '<b>{series.name}</b><br />',
-			pointFormat: 'Dias da Semana = {point.x}, Ocorrencias = {point.y}'
-		},
-
-		series: [{
-			data: data,
-			pointStart: 1,
-			label: {
-				enabled: false
-			}
-		}]
+$.getJSON('../DATA/vendas.json', function (data) {
+	
+		Highcharts.chart('vendas', {
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: 'Stacked column chart'
+			},
+			xAxis: {
+				categories: [15, 16, 17, 18, 19]
+			},
+			yAxis: {
+				min: 0,
+				title: {
+					text: 'Total fruit consumption'
+				},
+				stackLabels: {
+					enabled: true,
+					style: {
+						fontWeight: 'bold',
+						color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+					}
+				}
+			},
+			legend: {
+				align: 'right',
+				x: -30,
+				verticalAlign: 'top',
+				y: 25,
+				floating: true,
+				backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+				borderColor: '#CCC',
+				borderWidth: 1,
+				shadow: false
+			},
+			tooltip: {
+				headerFormat: '<b>{point.x}</b><br/>',
+				pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+			},
+			plotOptions: {
+				column: {
+					stacking: 'normal',
+					dataLabels: {
+						enabled: true,
+						color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+					}
+				}
+			},
+			series: data
+		});
 	});
-});
-
 // PATIO
 $.getJSON('../DATA/stock.json', function (data) {
 
 	// create the chart
 	Highcharts.stockChart('patio', {
-
 
 		rangeSelector: {
 			selected: 1
@@ -281,35 +300,55 @@ $.getJSON('../DATA/stock.json', function (data) {
 });
 
 // VENDAS SITE
-$.getJSON('../DATA/test.json', function (data) {
+$.getJSON('../DATA/vendas.json', function (data) {
 
 	Highcharts.chart('vendasSite', {
-
+		chart: {
+			type: 'column'
+		},
 		title: {
-			text: 'Grafico 1'
+			text: 'Stacked column chart'
 		},
-
 		xAxis: {
-			tickInterval: 7
+			categories: [15, 16, 17, 18, 19]
 		},
-
 		yAxis: {
-			type: 'logarithmic',
-			tickInterval: 1,
-			minorTickInterval: 0.1
-		},
-
-		tooltip: {
-			headerFormat: '<b>{series.name}</b><br />',
-			pointFormat: 'Dias da Semana = {point.x}, Ocorrencias = {point.y}'
-		},
-
-		series: [{
-			data: data,
-			pointStart: 1,
-			label: {
-				enabled: false
+			min: 0,
+			title: {
+				text: 'Total fruit consumption'
+			},
+			stackLabels: {
+				enabled: true,
+				style: {
+					fontWeight: 'bold',
+					color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+				}
 			}
-		}]
+		},
+		legend: {
+			align: 'right',
+			x: -30,
+			verticalAlign: 'top',
+			y: 25,
+			floating: true,
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+			borderColor: '#CCC',
+			borderWidth: 1,
+			shadow: false
+		},
+		tooltip: {
+			headerFormat: '<b>{point.x}</b><br/>',
+			pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+		},
+		plotOptions: {
+			column: {
+				stacking: 'normal',
+				dataLabels: {
+					enabled: true,
+					color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+				}
+			}
+		},
+		series: data
 	});
 });
