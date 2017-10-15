@@ -113,4 +113,12 @@ body {
 }
 .fabrica{
 	font-family: 'Saira Extra Condensed', sans-serif;
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+}
+.navbar{
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
 }
