@@ -22,7 +22,7 @@ Os gráficos de pizza são alimentados por um json como esse:
     "y": 24.03
 }]
 ```
-Onde "y" é a porcentagem do dado.
+Onde "y" é a porcentagem do dado. 
 
 ### Stock
 Os gráficos de stock tem um esquema de json mais complexo.
