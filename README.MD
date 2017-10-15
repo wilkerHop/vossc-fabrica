@@ -4,12 +4,18 @@ Projeto da aplicação VOSSC para o Challenge da T-Systems.
 ## Gráficos
 Os gráficos estão sendo alimentados por jsons na pasta pública DATA.
 
-### Charts comuns
-Os gráficos de barras e linha são alimentados por um json como esse:
+### Pizza
+Os gráficos de pizza são alimentados por um json como esse:
 ```json
-[1, 2, 4, 8, 16, 32, 64, 89]
+[{
+    "name": "Microsoft Internet Explorer",
+    "y": 56.33
+}, {
+    "name": "Chrome",
+    "y": 24.03
+}]
 ```
-
+Onde "y" é a porcentagem do dado.
 
 ### Stock
 Os gráficos de stock tem um esquema de json mais complexo.
