@@ -7,7 +7,7 @@ Os gráficos estão sendo alimentados por jsons na pasta pública DATA.
 ### Stock
 Os gráficos de stock tem um esquema de json mais complexo.
 Por exemplo:
-´´´json
+´´´javascript
 [
     [1505088000000, 160.50, 162.05, 159.89, 161.50],
 	[1505174400000, 162.61, 163.96, 158.77, 160.86],
