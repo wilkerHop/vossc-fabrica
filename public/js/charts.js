@@ -1,9 +1,8 @@
 // fornecedor 1
-$.getJSON('../DATA/forn2.json', function (data) {
-	console.log(data)
+$.getJSON('../DATA/forn1.json', function (data) {
 	Highcharts.chart('forn1', {
 		chart: {
-			plotBackground	: null,
+			plotBackground: null,
 			plotBorderWidth: null,
 			plotShadow: false,
 			type: 'pie'
@@ -30,35 +29,50 @@ $.getJSON('../DATA/forn2.json', function (data) {
 		series: [{
 			name: 'Brands',
 			colorByPoint: true,
-			data: [{
-				name: 'Microsoft Internet Explorer',
-				y: 56.33
-			}, {
-				name: 'Chrome',
-				y: 24.03,
-				sliced: true,
-				selected: true
-			}, {
-				name: 'Firefox',
-				y: 10.38
-			}, {
-				name: 'Safari',
-				y: 4.77
-			}, {
-				name: 'Opera',
-				y: 0.91
-			}, {
-				name: 'Proprietary or Undetectable',
-				y: 0.2
-			}]
+			data: data
 		}]
 	});
 });
 
 // fornecedor 2
 $.getJSON('../DATA/forn2.json', function (data) {
-	console.log(data)
 	Highcharts.chart('forn2', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie'
+		},
+		title: {
+			text: 'Browser market shares January, 2015 to May, 2015'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+					style: {
+						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+					}
+				}
+			}
+		},
+		series: [{
+			name: 'Brands',
+			colorByPoint: true,
+			data: data
+		}]
+	});
+});
+
+// fornecedor 3
+$.getJSON('../DATA/forn3.json', function (data) {
+	Highcharts.chart('forn3', {
 		chart: {
 			plotBackgroundColor: null,
 			plotBorderWidth: null,
@@ -113,65 +127,53 @@ $.getJSON('../DATA/forn2.json', function (data) {
 });
 
 // ARMAZEM
-$.getJSON('../DATA/forn2.json', function (data) {
+$.getJSON('../DATA/armazem.json', function (data) {
 	// Create the chart
-Highcharts.chart('armazem', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Browser market shares. January, 2015 to May, 2015'
-    },
-    subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
-    },
-    xAxis: {
-        type: 'category'
-    },
-    yAxis: {
-        title: {
-            text: 'Total percent market share'
-        }
+	Highcharts.chart('armazem', {
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: 'Browser market shares. January, 2015 to May, 2015'
+		},
+		subtitle: {
+			text: 'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
+		},
+		xAxis: {
+			type: 'category'
+		},
+		yAxis: {
+			title: {
+				text: 'Total percent market share'
+			}
 
-    },
-    legend: {
-        enabled: false
-    },
-    plotOptions: {
-        series: {
-            borderWidth: 0,
-            dataLabels: {
-                enabled: true,
-                format: '{point.y:.1f}%'
-            }
-        }
-    },
+		},
+		legend: {
+			enabled: false
+		},
+		plotOptions: {
+			series: {
+				borderWidth: 0,
+				dataLabels: {
+					enabled: true,
+					format: '{point.y:.1f}%'
+				}
+			}
+		},
 
-    tooltip: {
-        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-    },
+		tooltip: {
+			headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+			pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+		},
 
-    series: [{
-        name: 'Brands',
-        colorByPoint: true,
-        data: [{
-            name: 'Microsoft Internet Explorer',
-            y: 56.33,
-            drilldown: 'Microsoft Internet Explorer'
-        }, {
-            name: 'Chrome',
-            y: 24.03,
-            drilldown: 'Chrome'
-        }, {
-            name: 'Firefox',
-            y: 10.38,
-            drilldown: 'Firefox'
-        }]
-    }]
-});
+		series: [{
+			name: 'Brands',
+			colorByPoint: true,
+			data: data
+		}]
+	});
 })
-	
+
 
 // VENDAS
 $.getJSON('../DATA/test.json', function (data) {
