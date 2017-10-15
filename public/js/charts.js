@@ -168,17 +168,17 @@ $.getJSON('../DATA/armazem.json', function (data) {
 			type: 'column'
 		},
 		title: {
-			text: 'Browser market shares. January, 2015 to May, 2015'
+			text: 'Matéria Prima Armazenada'
 		},
 		subtitle: {
-			text: 'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
+			text: 'Divisão por cores.'
 		},
 		xAxis: {
 			type: 'category'
 		},
 		yAxis: {
 			title: {
-				text: 'Total percent market share'
+				text: 'Total percentual armazenado'
 			}
 
 		},
@@ -197,11 +197,11 @@ $.getJSON('../DATA/armazem.json', function (data) {
 
 		tooltip: {
 			headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-			pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+			pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> do total<br/>'
 		},
 
 		series: [{
-			name: 'Brands',
+			name: 'Cor',
 			colorByPoint: true,
 			data: data
 		}]
@@ -217,7 +217,7 @@ $.getJSON('../DATA/vendas.json', function (data) {
 				type: 'column'
 			},
 			title: {
-				text: 'Stacked column chart'
+				text: 'Vendas separadas por Cor'
 			},
 			xAxis: {
 				categories: [15, 16, 17, 18, 19]
@@ -247,7 +247,7 @@ $.getJSON('../DATA/vendas.json', function (data) {
 				shadow: false
 			},
 			tooltip: {
-				headerFormat: '<b>{point.x}</b><br/>',
+				headerFormat: '<b>Dia: {point.x}</b><br/>',
 				pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
 			},
 			plotOptions: {
