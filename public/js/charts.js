@@ -126,6 +126,39 @@ $.getJSON('../DATA/forn3.json', function (data) {
 	});
 });
 
+$.getJSON('../DATA/test.json', function (data) {
+
+	Highcharts.chart('producao', {
+
+		title: {
+			text: 'Produção da semana'
+		},
+
+		xAxis: {
+			tickInterval: 7
+		},
+
+		yAxis: {
+			type: 'logarithmic',
+			tickInterval: 1,
+			minorTickInterval: 0.1
+		},
+
+		tooltip: {
+			headerFormat: '<b>{series.name}</b><br />',
+			pointFormat: 'Dias da Semana = {point.x}, Ocorrencias = {point.y}'
+		},
+
+		series: [{
+			data: data,
+			pointStart: 1,
+			label: {
+				enabled: false
+			}
+		}]
+	});
+});
+
 // ARMAZEM
 $.getJSON('../DATA/armazem.json', function (data) {
 	// Create the chart
