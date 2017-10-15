@@ -132,7 +132,7 @@ $.getJSON('../DATA/test.json', function (data) {
 	Highcharts.chart('prod', {
 
 		title: {
-			text: 'Grafico 1'
+			text: 'Erros na produção divididos diariamente'
 		},
 
 		xAxis: {
@@ -140,6 +140,9 @@ $.getJSON('../DATA/test.json', function (data) {
 		},
 
 		yAxis: {
+			title: {
+				text: 'Total de erros na produção'
+			},
 			type: 'logarithmic',
 			tickInterval: 1,
 			minorTickInterval: 0.1
@@ -171,7 +174,7 @@ $.getJSON('../DATA/armazem.json', function (data) {
 			text: 'Matéria Prima Armazenada'
 		},
 		subtitle: {
-			text: 'Divisão por cores.'
+			text: 'Divisão por cores'
 		},
 		xAxis: {
 			type: 'category'
@@ -225,7 +228,7 @@ $.getJSON('../DATA/vendas.json', function (data) {
 			yAxis: {
 				min: 0,
 				title: {
-					text: 'Total fruit consumption'
+					text: 'Total de vendas diarias'
 				},
 				stackLabels: {
 					enabled: true,
@@ -284,10 +287,10 @@ $.getJSON('../DATA/stock.json', function (data) {
 				units: [
 					[
 						'day', // unit name
+						'week', // unit name
 						[1] // allowed multiples
 					],
 					[
-						'week', // unit name
 						[1] // allowed multiples
 					],
 					[
@@ -307,7 +310,7 @@ $.getJSON('../DATA/vendas.json', function (data) {
 			type: 'column'
 		},
 		title: {
-			text: 'Stacked column chart'
+			text: 'Vendas separadas por Cor'
 		},
 		xAxis: {
 			categories: [15, 16, 17, 18, 19]
@@ -315,7 +318,7 @@ $.getJSON('../DATA/vendas.json', function (data) {
 		yAxis: {
 			min: 0,
 			title: {
-				text: 'Total fruit consumption'
+				text: 'Total de vendas diarias'
 			},
 			stackLabels: {
 				enabled: true,
@@ -337,7 +340,7 @@ $.getJSON('../DATA/vendas.json', function (data) {
 			shadow: false
 		},
 		tooltip: {
-			headerFormat: '<b>{point.x}</b><br/>',
+			headerFormat: '<b>Dia: {point.x}</b><br/>',
 			pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
 		},
 		plotOptions: {
