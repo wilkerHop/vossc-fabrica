@@ -4,6 +4,13 @@ Projeto da aplicação VOSSC para o Challenge da T-Systems.
 ## Gráficos
 Os gráficos estão sendo alimentados por jsons na pasta pública DATA.
 
+### Charts comuns
+Os gráficos de barras e linha são alimentados por um json como esse:
+```json
+[1, 2, 4, 8, 16, 32, 64, 89]
+```
+
+
 ### Stock
 Os gráficos de stock tem um esquema de json mais complexo.
 Por exemplo:
@@ -17,3 +24,4 @@ Por exemplo:
 ]
 ```
 O exemplo mostra um array de dias formando uma semana de dados, onde o primeiro dado do dia é a identificação do dia, que no caso são de 2017-09-11 à 2017-09-15, o segundo é a quantidade que havia no início, o terceiro é a quantidade máxima que foi armazenada no dia, o quarto é a quantidade mínima que foi armazenada no dia e o quinto é a quantidade final do dia.
+Use esse app para definir o identificador para o próximo dia: [nextTermApp](http://thinkphp.github.io/nextTerm/) 
