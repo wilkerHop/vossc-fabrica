@@ -1,0 +1,24 @@
+h1, h2, p
+{
+  color: white;
+}
+.blue
+{
+  background-color: #009;
+}
+.grey
+{
+  background-color: #161616;
+}
+.green
+{
+  background-color: #090;
+}
+.white
+{
+  background-color: #fff;
+}
+.space
+{
+  margin-top:150px;
+}

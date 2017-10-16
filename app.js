@@ -22,6 +22,10 @@ app.get('/fabrica',(req,res)=>{
 	res.render('fabrica')
 })
 
+app.get('/dash',(req,res)=>{
+	res.render('dash')
+})
+
 app.listen(process.env.PORT || 3000, () => {
 	console.log('running on 3000 port');
 })
