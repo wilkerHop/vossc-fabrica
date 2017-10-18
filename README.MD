@@ -61,6 +61,7 @@ Use esse app para definir o identificador para o próximo dia: [nextTermApp](htt
 
 #
 ## To do:
-- Preciso saber onde o erro acontece;
-- Preciso saber quem reportou o erro;
-- Preciso dos dados para o gráfico
+- Preciso saber das seguintes informações para colocar no objeto de erro:
+- - onde o erro acontece;
+- - quem reportou o erro.
+- Recolher dados da maquete para enviar para os jsons
