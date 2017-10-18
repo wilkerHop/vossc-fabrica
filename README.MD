@@ -1,6 +1,26 @@
 # VOSSC
 Projeto da aplicação VOSSC para o Challenge da T-Systems.
 
+## Manipulação de erros
+Os erros são enviados para a view via objetos:
+```javascript
+var forn2 = [];
+var forn3 = [];
+var prod = [];
+var armazem = [];
+var vendas = [];
+var patio = [];
+var vendasSite = [];
+```
+Cada array deve ser populado com o erro da área específica. Exem:
+```javascript
+var forn3 = [
+    {text: 'Atraso na entrega'},
+    {text: 'Produtos impróprios'},
+    {text: 'Problemas de comunicação'},
+]
+```
+
 ## Gráficos
 Os gráficos estão sendo alimentados por jsons na pasta pública DATA.
 
@@ -38,3 +58,9 @@ Por exemplo:
 ```
 O exemplo mostra um array de dias formando uma semana de dados, onde o primeiro dado do dia é a identificação do dia, que no caso são de 2017-09-11 à 2017-09-15, o segundo é a quantidade que havia no início, o terceiro é a quantidade máxima que foi armazenada no dia, o quarto é a quantidade mínima que foi armazenada no dia e o quinto é a quantidade final do dia.
 Use esse app para definir o identificador para o próximo dia: [nextTermApp](http://thinkphp.github.io/nextTerm/) 
+
+#
+## To do:
+- Preciso saber onde o erro acontece;
+- Preciso saber quem reportou o erro;
+- Preciso dos dados para o gráfico

@@ -112,17 +112,59 @@
 		<div class="row">
 			<a data-toggle="modal" href='#modal-forn1'>
 				<div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 fornecedor fabrica">
-					Fornecedor 1
+					Fornecedor 1 <br>
+					<div class="errosMin">
+						<% if (forn1.length > 0) { 
+							forn1.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 			<a data-toggle="modal" href='#modal-forn2'>
 				<div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 fornecedor fabrica">
-					Fornecedor 2
+					Fornecedor 2 <br>
+					<div class="errosMin">
+						<% if (forn2.length > 0) { 
+							forn2.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 			<a data-toggle="modal" href='#modal-forn3'>
 				<div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 fornecedor fabrica">
-					Fornecedor 3
+					Fornecedor 3 <br>
+					<div class="errosMin">
+						<% if (forn3.length > 0) { 
+							forn3.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 		</div>
@@ -131,19 +173,61 @@
 
 			<a data-toggle="modal" href='#modal-producao'>
 				<div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 producao fabrica">
-					Produção
+					Produção<br>
+					<div class="errosMin">
+						<% if (prod.length > 0) { 
+							prod.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 
 			<a data-toggle="modal" href='#modal-armazem'>
 				<div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 armazem fabrica">
-					Armazem
+					Armazem<br>
+					<div class="errosMin">
+						<% if (armazem.length > 0) { 
+							armazem.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 
 			<a data-toggle="modal" href='#modal-venda'>
 				<div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 venda fabrica">
-					Vendas
+					Vendas<br>
+					<div class="errosMin">
+						<% if (vendas.length > 0) { 
+							vendas.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 
@@ -152,7 +236,21 @@
 		<div class="row">
 			<a data-toggle="modal" href='#modal-patio'>
 				<div class="col-xs-10 col-sm-4 col-md-4 col-lg-4 patio fabrica">
-					Patio
+					Patio<br>
+					<div class="errosMin">
+						<% if (patio.length > 0) { 
+							patio.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 			<div class="col-xs-10 col-sm-4 col-md-4 col-lg-4">
@@ -160,7 +258,21 @@
 			</div>
 			<a data-toggle="modal" href='#modal-vendaSite'>
 				<div class="col-xs-10 col-sm-4 col-md-4 col-lg-4 vendaSite fabrica">
-					Vendas Site
+					Vendas Site<br>
+					<div class="errosMin">
+						<% if (vendasSite.length > 0) { 
+							vendasSite.forEach(function(item, index){ %>
+
+							<span> erro: <%= item.text %> </span><br>
+					
+						<% 	}
+						)} else {%>
+
+							<span>Não há erros</span>
+
+						<%}%>
+						
+					</div>
 				</div>
 			</a>
 		</div>
@@ -328,7 +440,7 @@
 			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
 
 		</div>
-
+<%=erros[0]%>
 	</footer>
 
 <!-- CHARTS -->
